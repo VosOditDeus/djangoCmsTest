@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static  cms_tags %}
+{% block content %}
+<div class="container">
+<div class="grid-stack">
+
+
+ {% for plugin in instance.child_plugin_instances %}
+{#        <li class="list-inline-item {{ plugin.extra_classes }}">#}
+            {% render_plugin plugin %}
+{#        </li>#}
+    {% endfor %}
+
+</div>
+</div>
+{% endblock %}
